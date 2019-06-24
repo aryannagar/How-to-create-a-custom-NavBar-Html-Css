@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-image: url(file:///C:/Users/Aryan/Desktop/img.jpg);
+            background-size: 100%;
+        }
+        nav*{
+            box-sizing: border-box;
+            transition: all ease 0.3s;
+        }
+        nav{
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            width: 60%;
+            height: 80px;
+            background: #fff;
+            border-radius: 50px;
+            margin: 5% 0 0 17%;
+        }
+        nav li{
+            display: inline-block;
+            margin: .5em 1em;
+            padding: 20px;
+        }
+        nav a{
+            text-decoration: none;
+            color: #808080;
+            position: relative;
+            padding: .5em 0.8em;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        nav a:hover{
+            color: #008000;
+        }
+        nav a::before,
+        nav a::after{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            content: '';
+            transition: all ease 0.3s;
+            opacity: 0;
+        }
+        nav a::before{
+            right: 0;
+            top: 0;
+            transform: translate(-100%, 50%);
+            border-right: 3px solid #008000;
+            border-top: 3px solid #008000;
+        }
+        nav a::after{
+            left: 0;
+            bottom: 0;
+            transform: translate(100%, -50%);
+            border-left: 3px solid #008000;
+            border-bottom: 3px solid #008000;
+        }
+        nav a:hover::before,
+        nav a:hover::after{
+            transform: translate(0%, 0%);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </nav>
+</body>
+</html>
